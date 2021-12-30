@@ -1,0 +1,67 @@
+.container{
+  width: 100%;
+  display: flex;
+  padding-left: 100px;
+  justify-content: space-between;
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+  height: 150px;
+}
+.filters{
+  display: inline-flex;
+  width: fit-content;
+  justify-content: center;
+  align-items: center;
+
+  .filters-header{
+    font-size: 14px;
+    padding-right: 1em;
+  }
+  select{
+    font-size: 14px;
+    padding: .5em;
+    border-radius: 10px;
+    border: 1px solid #323031;
+    color: #323031;
+    cursor: pointer;
+    &:focus{
+      outline: none;
+      border: 1px solid #db3a34;
+    }
+  }
+}
+
+.addNewCard-button{
+  position: relative;
+  display: flex;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: #323031;
+  color: white;
+  border-radius: 50%;
+  font-size: 20px;
+  padding: 10px 15px;
+  cursor: pointer;
+  &--hidden{
+    display: none;
+  }
+  &:hover::after{
+    content: attr(data-title);
+    position: absolute;
+    color: #323031;
+    right: -150px;
+    top: -20px;
+    border: 1px solid #323031;
+    border-radius: 10px;
+    width: max-content;
+    background: white;
+    padding: .5em 1em;
+    font-size: 12px;
+  }
+}

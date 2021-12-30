@@ -1,24 +1,29 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route
+} from "react-router-dom";
+import Header from "./components/Header/Header";
+import CardsPage from "./pages/CardsPage/CardsPage";
 import './App.css';
 
+const data = require('./dataMock.json');
+
 function App() {
+    const [cards, setCards] = useState(data);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Router>
+          <div className="App">
+              <Header />
+              <Routes>
+                  <Route path='/cards' element={<CardsPage cards={cards}/>} />
+              </Routes>
+          </div>
+      </Router>
+
   );
 }
 

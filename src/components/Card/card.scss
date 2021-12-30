@@ -1,0 +1,57 @@
+.card{
+    position: relative;
+    width: 315px;
+    height: 184px;
+    background: #177e89;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    padding: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    .card-logo{
+        width: 40px;
+        height: 40px;
+        &--hidden{
+            display: none;
+        }
+    }
+    &-Luckoil{
+        background: #db3a34;
+    }
+    &-Rosneft{
+        background: #FFC857;
+    }
+    &-Gasprom{
+        background: #177e89;
+    }
+    &.card-banned{
+        background: #323031;
+        div {
+            p{
+                color: #ffffff40;
+            }
+        }
+    }
+    .card-description{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card-bonuses{
+        &--title{
+            font-size: 14px;
+            color: #ffffff80;
+        }
+        &--value{
+            padding: 9px 0;
+            font-size: 28px;
+            color: white;
+        }
+    }
+    .card-number{
+        color: white;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,18 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    padding: 0 34px;
+    padding-top: 10%;
+    align-items: center;
+    border-right: 1px solid #00000020;
+}
+
+.header a{
+    margin: 12px 0;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 30px;
+}
